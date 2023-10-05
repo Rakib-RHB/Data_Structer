@@ -1,40 +1,40 @@
-typedef struct
+# include <stdio.h>
+# include <string.h>
+
+// Define a struct to represent a person
+struct Person
 {
-    int month ;
-    int day ;
-    int year ;
-} Adate;
-typedef struct
+    char first_name[50];
+    char last_name[50];
+    int age;
+};
+
+int main()
 {
-    int MONTH ;
-    int DAY ;
-    int YEAR ;
-} Adate1;
-int main ()
-{
-    Adate d;
-    d.month  = 10;
-    d.day = 2;
-    d.year = 2023;
-    printf("%d/",d.month);
-    printf("%d/",d.day);
-    printf("%d",d.year);
-    printf("\n");
+    // Create instances of the Person struct
+    struct Person person1;
+    struct Person person2;
 
+    // Populate the data for person1
+    strcpy(person1.first_name, "John");
+    strcpy(person1.last_name, "Doe");
+    person1.age = 30;
 
+    // Populate the data for person2
+    strcpy(person2.first_name, "Alice");
+    strcpy(person2.last_name, "Smith");
+    person2.age = 25;
 
-    printf("Using Scanf : ");
+    // Print information about the people
+    printf("Person 1:\n");
+    printf("First Name: %s\n", person1.first_name);
+    printf("Last Name: %s\n", person1.last_name);
+    printf("Age: %d\n", person1.age);
 
-    Adate1 p;
+    printf("\nPerson 2:\n");
+    printf("First Name: %s\n", person2.first_name);
+    printf("Last Name: %s\n", person2.last_name);
+    printf("Age: %d\n", person2.age);
 
-    scanf("%d",&p.MONTH);
-    scanf("%d",&p.DAY);
-    scanf("%d",&p.YEAR);
-
-
-    printf("%d/",p.MONTH);
-    printf("%d/",p.DAY);
-    printf("%d",p.YEAR);
     return 0;
-
 }
